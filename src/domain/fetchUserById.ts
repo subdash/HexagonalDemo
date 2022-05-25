@@ -1,6 +1,6 @@
-import UserService from "../ports/outgoing/UserService";
+import Database from "../ports/outgoing/Database";
 import {User} from "./types";
 
-export const fetchUserById = async (userId: number, userService: UserService): Promise<User> => {
-    return userService.fetchUserById(userId);
+export const fetchUserById = async (userId: number, dbService: Database): Promise<User> => {
+    return dbService.fetchUserById(userId);
 };

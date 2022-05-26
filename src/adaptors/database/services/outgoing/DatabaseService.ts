@@ -1,7 +1,7 @@
-import Database from "../../../ports/outgoing/Database";
-import {Company, User} from "../../../domain/types";
-import {fetchUserById} from "../../get/fetchUserById";
-import {fetchCompanyById} from "../../get/fetchCompanyById";
+import Database from "../../../../ports/outgoing/Database";
+import {Company, User} from "../../../../domain/types";
+import {fetchUserById} from "../../../web/get/fetchUserById";
+import {fetchCompanyById} from "../../../web/get/fetchCompanyById";
 
 export class DatabaseService implements Database {
     async fetchUserById(userId: number): Promise<User> {

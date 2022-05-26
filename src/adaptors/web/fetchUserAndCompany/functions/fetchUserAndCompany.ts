@@ -1,4 +1,4 @@
-import {Company, HTTPRequest, User} from "../../../domain/types";
+import {Company, HTTPRequest, User} from "../../../../domain/types";
 import {webService} from "../../services/incoming/WebService";
 
 export const fetchUserAndCompany = async (request: HTTPRequest): Promise<{ user: User; company: Company }> => {

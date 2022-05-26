@@ -1,8 +1,8 @@
-import Web from "../../../ports/incoming/Web";
-import {Company, User} from "../../../domain/types";
-import {fetchUserById} from "../../../domain/fetchUserById";
-import {databaseService} from "../outgoing/DatabaseService";
-import {fetchCompanyById} from "../../../domain/fetchCompanyById";
+import Web from "../../../../ports/incoming/Web";
+import {Company, User} from "../../../../domain/types";
+import {fetchUserById} from "../../../../domain/fetchUserById";
+import {databaseService} from "../../../database/services/outgoing/DatabaseService";
+import {fetchCompanyById} from "../../../../domain/fetchCompanyById";
 
 class WebService implements Web {
     async fetchUser(userId: number): Promise<User> {

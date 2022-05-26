@@ -1,4 +1,4 @@
-import {HTTPRequest, HTTPResponse} from "../../domain/types";
+import {HTTPRequest, HTTPResponse} from "../../../domain/types";
 import {fetchUserAndCompany} from "./functions/fetchUserAndCompany";
 
 export const handler = async (request: HTTPRequest): Promise<HTTPResponse> => {

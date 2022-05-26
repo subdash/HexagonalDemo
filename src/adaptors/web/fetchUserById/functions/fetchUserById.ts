@@ -1,4 +1,4 @@
-import {HTTPRequest, User} from "../../../domain/types";
+import {HTTPRequest, User} from "../../../../domain/types";
 import {webService} from "../../services/incoming/WebService";
 
 export const fetchUserById = async (request: HTTPRequest): Promise<User> => {

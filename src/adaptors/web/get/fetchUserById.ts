@@ -1,4 +1,4 @@
-import {User} from "../../domain/types";
+import {User} from "../../../domain/types";
 
 export const fetchUserById = async (userId: number): Promise<User> => {
     return Promise.resolve({

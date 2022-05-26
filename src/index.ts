@@ -1,7 +1,7 @@
 import express from 'express';
-import {handler as userByIdHandler} from "./adaptors/fetchUserById";
+import {handler as userByIdHandler} from "./adaptors/web/fetchUserById";
 import {HTTPRequest} from "./domain/types";
-import {handler as userAndCompanyHandler} from "./adaptors/fetchUserAndCompany";
+import {handler as userAndCompanyHandler} from "./adaptors/web/fetchUserAndCompany";
 
 const app = express();
 const port = 8081;
@@ -31,6 +31,6 @@ app.get( "/users/:userId/company", async (req: any, res: any) => {
 } );
 
 
-app.listen(port, () => {});
+app.listen(port, () => { /* start server (this can't be empty) */ });
 
 export default app;

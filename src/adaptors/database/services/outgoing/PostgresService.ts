@@ -1,9 +1,9 @@
 import Database from "../../../../ports/outgoing/Database";
-import {Company, User} from "../../../../domain/types";
+import {Company, User} from "../../../../domain/models";
 import {fetchUserById} from "../../../web/get/fetchUserById";
 import {fetchCompanyById} from "../../../web/get/fetchCompanyById";
 
-export class DatabaseService implements Database {
+export class PostgresService implements Database {
     async fetchUserById(userId: number): Promise<User> {
         return fetchUserById(userId);
     }
@@ -13,4 +13,4 @@ export class DatabaseService implements Database {
     }
 }
 
-export const databaseService = new DatabaseService();
+export const postgresService = new PostgresService();

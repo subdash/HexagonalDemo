@@ -1,6 +1,6 @@
 import express from 'express';
 import {handler as userByIdHandler} from "./adaptors/web/fetchUserById";
-import {HTTPRequest} from "./domain/types";
+import {HTTPRequest} from "./domain/models";
 import {handler as userAndCompanyHandler} from "./adaptors/web/fetchUserAndCompany";
 
 const app = express();

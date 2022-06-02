@@ -1,22 +1,16 @@
 import Web from "../../../../ports/incoming/Web";
-import {Company, User} from "../../../../domain/types";
+import {Company, User} from "../../../../domain/models";
 import {fetchUserById} from "../../../../domain/fetchUserById";
-import {databaseService} from "../../../database/services/outgoing/DatabaseService";
-import {fetchCompanyById} from "../../../../domain/fetchCompanyById";
+import {postgresService} from "../../../database/services/outgoing/PostgresService";
+import {fetchUserAndCompany} from "../../../../domain/fetchUserAndCompany";
 
 class WebService implements Web {
     async fetchUser(userId: number): Promise<User> {
-        return fetchUserById(userId, databaseService)
+        return fetchUserById(userId, postgresService)
     }
 
     async fetchUserAndCompany(userId: number): Promise<{ user: User; company: Company }> {
-        const user = await fetchUserById(userId, databaseService);
-        const company = await fetchCompanyById(userId, databaseService);
-
-        return Promise.resolve({
-            user,
-            company
-        });
+        return fetchUserAndCompany(userId, postgresService);
     }
 }
 

@@ -1,4 +1,4 @@
-import {HTTPRequest, HTTPResponse, User} from "../../../domain/types";
+import {HTTPRequest, HTTPResponse, User} from "../../../domain/models";
 import {fetchUserById} from "./functions/fetchUserById";
 
 export const handler = async (request: HTTPRequest): Promise<HTTPResponse> => {
